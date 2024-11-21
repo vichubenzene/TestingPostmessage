@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Worker Example - 5 Second Interval with CPU Load</title>
+  <title>Web Worker Example - Time & CPU Tasks</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -16,6 +16,14 @@
       max-height: 300px;
       overflow-y: auto;
     }
+    #task-log {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f0f0f0;
+      max-height: 300px;
+      overflow-y: auto;
+    }
     .cpu-load {
       margin-top: 20px;
     }
@@ -23,16 +31,11 @@
       margin-right: 10px;
       padding: 5px 10px;
     }
-    #cpu-status {
-      margin-top: 20px;
-      color: red;
-      font-weight: bold;
-    }
   </style>
 </head>
 <body>
-  <h1>Web Worker Example - Updates Every 5 Seconds</h1>
-  <p>The latest update will appear at the top of the list:</p>
+  <h1>Web Worker Example - Updates & CPU Task Tracking</h1>
+  <p>The latest updates will appear at the top of the list:</p>
 
   <div id="output"></div>
 
@@ -43,8 +46,10 @@
     <button onclick="simulateCpuLoad(3)">Level 3</button>
     <button onclick="simulateCpuLoad(4)">Level 4</button>
     <button onclick="simulateCpuLoad(5)">Level 5</button>
-    <div id="cpu-status"></div>
   </div>
+
+  <h2>Task Log</h2>
+  <div id="task-log"></div>
 
   <!-- Link to the main JavaScript file -->
   <script src="main.js"></script>
