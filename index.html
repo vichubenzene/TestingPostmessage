@@ -23,6 +23,11 @@
       margin-right: 10px;
       padding: 5px 10px;
     }
+    #cpu-status {
+      margin-top: 20px;
+      color: red;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -38,6 +43,7 @@
     <button onclick="simulateCpuLoad(3)">Level 3</button>
     <button onclick="simulateCpuLoad(4)">Level 4</button>
     <button onclick="simulateCpuLoad(5)">Level 5</button>
+    <div id="cpu-status"></div>
   </div>
 
   <!-- Link to the main JavaScript file -->
